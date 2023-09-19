@@ -2,24 +2,39 @@
 <html>
 <head>
   <title>Резюме</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Навигация</button>
+          <div id="myDropdown" class="dropdown-content">
+            <li><a href="#education">Образование</a></li>
+            <li><a href="#experiense">Опыт Работы</a></li>
+            <li><a href="#skills">Навыки и Квалификация</a></li>
+          </div>
+        </div>
+        <li><a href="#">Контактная информация: eduard.karasev.2002@mail.ru | +7-929-665-23-25</a></li>
+      </ul>
+    </nav>
+  </header>
   <div>
-    <h1>Эдуард Карасев</h1>
-    <p><img src="Assets/huGO5GdKrBY.jpg" align="top" /></p>
-    <p>Контактная информация: eduard.karasev.2002@mail.ru | +7-929-665-23-25</p>
-    <h2>Образование</h2>
+    <h1>Эдуард Карасев Федорович</h1>
+    <h2 id = "education">Образование</h2>
     <ul>
       <li>2021 - МиВЛГУ, Программная инженерия</li>
     </ul>
-    <h2>Опыт работы</h2>
+    <h2 id = "experiense">Опыт работы</h2>
     <ul>
       <li>2018 - Team Spirit, Rifler</li>
     </ul>
-    <h2>Навыки и квалификация</h2>
+    <h2 id = "skills">Навыки и квалификация</h2>
     <ul>
       <li>Знания языков: C#, C, JavaScript</li>
       <li>Ответственное выполнение своих обязанностей</li>
+      <li>Языки: Русский - родной; Английский - B2</li>
     </ul>
     <h2>Профессиональные достижения</h2>
     <ul>
@@ -27,4 +42,28 @@
     </ul>
   </div>
 </body>
+
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+
 </html>
+
+
+
+
