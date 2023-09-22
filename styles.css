@@ -1,13 +1,24 @@
+html,body { height:100%; }
+
 header {
     background-color: #333;
     padding: 20px;
   }
-  
+
+.text {
+  margin: auto;
+  background-color: #93acb8;
+    width: 80%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
   body {
     background-color: #edeef6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  
+
   nav ul {
     list-style-type: none;
     margin: 0;
